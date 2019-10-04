@@ -1,0 +1,240 @@
+/*
+ * PJ Css for button -- start
+ */
+
+.pj-btn-rectangle
+  padding: 10px 15px
+  font-size: 14px
+  font-weight: 600
+  border-radius: 0
+
+.pj-btn-violet
+  color: #ffffff
+  background-color: #4F58A3
+  border: 1px solid #707070
+
+  &:hover, &:focus
+    color: #ffffff
+    background-color: #414181
+    border-color: #adadad
+
+.pj-btn-default
+  color: #393333
+  background-color: #F5F5F5
+  border: 1px solid #707070
+
+  &:hover, &:focus
+    color: #333
+    background-color: #e6e6e6
+    border-color: #adadad
+
+.pj-btn-success
+  color: #FDFCFC
+  background: #38846D
+  border: 1px solid #707070
+
+  &:hover, &:focus
+    color: #ffffff
+    background: #366D56
+    border-color: #adadad
+
+.pj-btn-danger
+  color: #FDFCFC
+  background-color: #BF3636
+  border: 1px solid #707070
+
+  &:hover, &:focus
+    color: #ffffff
+    background-color: #922929
+    border-color: #adadad
+
+.pj-btn-large
+  padding: 10px 45px
+
+.pj-btn-medium
+  padding: 10px 30px 10px 15px
+/*
+ * PJ Css for form input -- start
+ */
+
+.pj-form-control input[type="text"], input[type="email"], input[type="password"]
+  background: #FFFFFF
+  width: 100%
+  border: 1px solid #C2C3C9
+  border-radius: 0
+  padding: 13px
+  box-sizing: border-box
+  font-size: 14px
+
+  &.has-error
+    border-color: #dc3545
+
+    &:focus
+      box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, .25)
+
+
+/*
+ * PJ Css for link text
+ */
+
+a
+  text-decoration: none
+
+
+/*
+ * PJ Css for table
+ */
+.pj-table
+  border-collapse: collapse
+  width: 100%
+  overflow-x: auto
+  min-width: 200px
+
+  tr
+
+    th, td
+      border: 1px solid #ddd
+      padding: 12px
+      font-size: 14px
+
+    th
+      padding-top: 12px
+      padding-bottom: 12px
+      text-align: left
+      background-color: #4F7C98
+      color: white
+      border: 1px solid #F5F5F5
+      font-weight: bold
+      min-width: 100px
+      width: 100px
+
+    td
+      min-height: 67px
+      border: 1px solid #070606
+
+      &.action-btn
+        padding-left: 42px
+        min-width: 235px
+
+        button
+          margin: 0 8px
+
+    & th:last-child, td:last-child
+      border: none
+      background: none
+
+/*
+ * PJ Css for modal
+ */
+
+.pj-modal
+  
+  .modal-content
+    border-radius: 0
+    border: 1px solid #707070
+
+    .modal-header
+      align-items: center
+      padding: 6px 24px 6px 40px
+      border: 1px solid #464040
+      border-radius: 0
+
+      .modal-title
+        font-size: 24px
+        color: #464040
+        font-weight: 600
+
+      button.close
+        color: #BF3636
+        font-size: 64px
+        font-weight: lighter
+        opacity: 1
+
+        &:hover
+          color: #de1919
+        
+        &:focus
+          outline: none
+
+    .modal-body
+      border: 1px solid #464040
+      border-top: none
+
+      p
+        margin-top: 8px
+        font-size: 24px
+        font-weight: 400
+        padding-left: 5px
+
+      .confirm-btn
+        margin: 45px 0
+
+        button
+          margin: 0 30px
+
+  .pj-btn-success
+    min-width: 100px
+
+        
+/*
+ * PJ Css for main content
+ */
+
+.main-content
+  .box
+    .box-header
+      position: relative
+      margin-bottom: 30px
+
+      .box-title
+        color: #1D1C1C
+        font-weight: bold
+        font-size: 20px
+
+      .box-tools
+        position: absolute
+        top: 0
+        right: 0
+
+    .box-body
+      
+      .pj-form
+        .pj-table-form
+          width: 100%
+
+          td
+            vertical-align: center
+            padding: 5px 15px
+            font-size: 14px
+
+            &.form-label
+              text-align: center
+              padding: 10px
+              background: #4F7C98
+              color: #fff
+              border: 1px solid #F5F5F5
+              width: 120px
+              font-weight: 600
+
+            &.form-group
+              border: 1px solid #070606
+              background: #F4F7F8
+
+              input[type="text"], input[type="email"], input[type="password"], select
+                border-radius: 0
+                border: 1px solid #707070
+                height: 30px
+
+    .box-footer
+      margin: 100px auto 0
+
+/* Pj For pagination */
+ul.ngx-pagination
+  font-size: 14px
+  & > .current
+    background-color: #4F58A3
+
+@media (max-width: 1024px)
+  .pj-table
+    th
+      white-space: nowrap

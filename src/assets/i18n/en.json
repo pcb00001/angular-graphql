@@ -1,0 +1,60 @@
+{
+  "Dashboard": "Dashboard",
+  "User": "User",
+  "SiteName": "PJ Car Exam",
+  "IsRequired": "is required",
+  "NotValid": "not valid",
+  "NotBeGreater": "may not be greater than {{ number }} characters",
+  "NotFound": "Record Not Found",
+
+  "Button": {
+    "Back": "Back",
+    "SignUp": "SignUp",
+    "Cancel": "Cancel",
+    "ScrollToTop": "Top",
+    "Detail": "Detail",
+    "Delete": "Delete",
+    "AdminAdd": "Add",
+    "Yes": "Yes",
+    "No": "No",
+    "ToEdit": "Edit",
+    "ToDelete": "Delete",
+    "BackToIndex": "Back to index",
+    "EditComplete": "Edit completed"
+  },
+
+  "Sidebar": {
+    "MainMenu": "Main Menu"
+  },
+
+  "CategoryPage": {
+    "Title": "Category",
+    "ListTitle": "List category",
+    "CreateTitle": "Create new category",
+    "DetailTitle": "Detail category",
+    "EditTitle": "Edit category",
+    "CategoryName": "Name",
+    "ChildName": "Child name",
+    "Description": "Description",
+    "QuestionNumber": "Question number",
+    "CategoryId": "Category ID",
+    "ParentName": "Parent Name",
+    "DeleteTitle": "Are you sure want to delete this category?",
+    "EditSuccessMsg": "Update category successful",
+    "UpdatedCategory": "Update category successful",
+    "DeletedCategory": "Deleted Category",
+    "CategoryRegistered": "Create category successful"
+  },
+  "DeleteConfirm": "Confirmation",
+  "Validation": {
+    "Required": "{{ attribute }} is required.",
+    "MaxLength": "{{ attribute }} may not be greater than {{ max }} characters.",
+    "Min": "The number specified is too small. Please specify the number above {{ min }}",
+    "Max": "Too many are specified. Specify the following numbers. {{ max }}",
+    "TotalQuestionValid": "The number of questions specified for the exam range should be the same as the number of questions in the exam."
+  },
+
+  "Times": "Times",
+  "Q": "Q",
+  "Min": "Min"
+}

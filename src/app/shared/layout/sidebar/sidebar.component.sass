@@ -1,0 +1,43 @@
+.sidebar
+  display: block
+  height: auto
+
+  .sidebar-list
+    list-style: none
+    margin: 0
+    padding: 0
+
+    .sidebar-list-item
+      position: relative
+      margin: 0
+      font-weight: 600
+      font-size: 18px
+      cursor: pointer
+
+      a:not(.collapse-icon)
+        border-bottom: 1px solid #aaaaaad1
+        display: block
+        width: 100%
+        height: 100%
+        padding: 15px
+        cursor: pointer
+        &:hover
+          color: #4F7C98
+
+        &.children-item
+          padding-left: 30px
+
+      &.active
+        background: #d0cdcd
+        border-left: 2px solid #5963AD
+
+      a
+        color: #4b4747
+
+        &:hover
+          text-decoration: none
+
+.collapse-icon
+  position: absolute
+  top: 15px
+  right: 15px
