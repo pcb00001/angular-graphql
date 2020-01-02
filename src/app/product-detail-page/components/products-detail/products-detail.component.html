@@ -1,0 +1,34 @@
+<div class="NkPdp NkPdp-small NkPdp-small-new">
+    <div class="NkPdp_productInfo">
+        <h1 class="product_info_name">{{data.name}}</h1>
+        <div class="price-details">
+            <!--                    <p class="price-old">-->
+            <!--                        <span>26.990.000đ</span></p>-->
+            <div class="price-now price-now-default">
+                <p class="price-new"><span>{{data.dtbProductClassList.edges[0].node.price02 | currency:'VND'}}</span>
+                </p>
+            </div>
+        </div>
+        <table>
+            <tr>
+                <td style="width: 50%">
+                    <div class="detail-large-image">
+                        <img src="/assets/images/products/{{largeImg}}">
+                    </div>
+                </td>
+                <td>
+                    <div class="ref-imgs">
+                        <div class="detail-image" *ngFor="let item of data.dtbProductImageList.edges">
+                            <img (click)="changeImg(item.node.fileName)"
+                                 src="/assets/images/products/{{item.node.fileName}}">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="NkPdp_productInfo">
+        <h1 class="product_description">Thông Số Kỹ Thuật</h1>
+        <div class="product_description_content" [innerHTML]="data.descriptionDetail"></div>
+    </div>
+</div>

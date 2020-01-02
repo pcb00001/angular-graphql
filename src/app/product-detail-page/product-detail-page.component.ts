@@ -3,14 +3,14 @@ import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
     selector: 'app-home',
-    templateUrl: './home.component.html',
-    styleUrls: ['./home.component.sass'],
+    templateUrl: './product-detail-page.component.html',
+    styleUrls: ['./product-detail-page.component.sass'],
     encapsulation: ViewEncapsulation.None  // Use to disable CSS Encapsulation for this component
 })
-export class HomeComponent implements OnInit {
+export class ProductDetailPageComponent implements OnInit {
 
-    homeDataSpBanChay = {}
-    homeDataSpMoi = {}
+    detailInfo = {}
+    blockInfo = {}
 
     constructor(
         private route: ActivatedRoute,
@@ -20,8 +20,7 @@ export class HomeComponent implements OnInit {
 
     ngOnInit() {
         this.route.data.subscribe(data => {
-            this.homeDataSpBanChay = data.homeData.spBanChay
-            this.homeDataSpMoi = data.homeData.spMoi
+            this.detailInfo = data.productDetailPageData.productDetail
         });
     }
 

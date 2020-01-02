@@ -1,0 +1,21 @@
+<div class="ty-pagination NkReview_footer clearfix">
+    <div class="NkReview_footer_col-1"></div>
+    <div class="NkReview_footer_col-2">
+        <div class="NkPaging ty-pagination__items">
+            <ng-container *ngFor="let item of data">
+                <span routerLink="{{item.routerLink}}" *ngIf="(item.isActive)" class="ty-pagination__selected page active" >
+                    {{item.pageIndex}}
+                </span>
+                <span routerLink="{{item.routerLink}}" *ngIf="(!item.isActive)" class="ty-pagination__selected page" >
+                    {{item.pageIndex}}
+                </span>
+            </ng-container>
+
+        </div>
+    </div>
+    <div class="NkReview_footer_col-3">
+        <a class="btn_next ty-pagination__item ty-pagination__btn ty-pagination__next cm-history " >
+            <i class="nki-arow-rounded-next"></i>
+        </a>
+    </div>
+</div>

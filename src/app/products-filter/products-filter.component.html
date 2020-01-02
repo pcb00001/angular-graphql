@@ -1,0 +1,64 @@
+<div class="tygh-content clearfix" id="product-filter-container">
+    <div class="container-fluid none-bacground nk-product-cate">
+        <div class="row-fluid ">
+            <div class="span16 margbt10"></div>
+        </div>
+        <div class="row-fluid ">
+            <div class="span16 container nk-product-cate">
+                <div class="row-fluid ">
+                    <div class="span4 nk-left-sidebar">
+                        <div class=" border-bg"><!-- Inline script moved to the bottom of the page -->
+                            <div class="nk-widget-fillter block-filter-tu-lanh"
+                                 data-ca-target-id="product_filters_*,products_search_*,category_products_*,search-box,feature-product-grid,grid-viewmore-page,grid-viewmore-page-product,grid-viewmore-page-compact,product_features_*,breadcrumbs_*,currencies_*,languages_*,selected_filters_*"
+                                 data-ca-base-url="https://www.nguyenkim.com/tu-lanh/?sort_by=position&amp;sort_order=desc"
+                                 id="product_filters_32"><!-- hunglm filtertag -->
+                                <div class="nk-widget-item"><h3>Bộ lọc danh mục sản phẩm</h3>
+                                    <p>Giúp lọc nhanh sản phẩm bạn tìm kiếm</p>
+                                    <div class="choosedfilter" style="padding: 0px 0px 2px;">
+                                        <div id="spspecial" class="clearfix"></div>
+                                    </div>
+                                </div>
+
+                                <div *ngFor="let tagItem of tags | keyvalue" class="nk-widget-item filter-wrap open cm-save-state cm-ss-reverse">
+                                    <h4>{{tagItem.key}}</h4>
+                                    <div *ngFor="let item of tagItem.value" id="filter_ext_32_33" class="bg_content boder_fiter_cate_2col">
+                                        <ul class="product-filters col_number_0">
+                                            <li>
+                                                <a class="hlm filter-item" (click)="filterAction(tagItem.key, item)">
+                                                    <input type="checkbox" name="checkbox">
+                                                    <span [ngClass]="{'active': filterTags.indexOf(tagItem.key + ':' +item) != -1}" class="nki-square-o-2 active"></span>
+                                                    <span>
+                                                        {{item}}
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span12 nk-right-content main-bg margbt10">
+                        <div id="category_products_241" class="grid-list-category main-bg">
+                            <div id="feature-product-grid">
+                                <div class="nk-sort-cate">
+                                    <div class="nk-sort-cate-left"><h3>Sắp xếp theo:</h3>
+                                        <ul>
+                                            <li (click)="orderDesc()" [ngClass]="{'active': orderFlag === 'des'}"><a>Giá
+                                                cao xuống thấp</a></li>
+                                            <li (click)="orderAsc()" [ngClass]="{'active': orderFlag === 'asc'}"><a>Giá
+                                                thấp đến cao</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <app-products-filter-block [data]="productsFilterData"></app-products-filter-block>
+                            </div>
+                            <app-products-paging [data]="pagingInfo" (pageClick)="orderAsc()"></app-products-paging>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

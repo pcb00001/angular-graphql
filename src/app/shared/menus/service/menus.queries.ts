@@ -1,18 +1,17 @@
 import gql from 'graphql-tag';
 
 export const data = gql`{
-    getAllDtbCategoryByCategoryName(categoryName: "menu") {
 
-        ModelChildrenDtbCategory {
+    menusData:getFirstDtbCategoryByCategoryName(categoryName: "menu") {
+        menusGroup:ModelChildrenDtbCategory {
             edges {
                 node {
-                    categoryName
-                    ModelChildrenDtbCategory {
+                    groupName:categoryName
+                    groupItems:ModelChildrenDtbCategory {
                         edges {
                             node {
                                 id
                                 categoryName
-
                             }
                         }
                     }

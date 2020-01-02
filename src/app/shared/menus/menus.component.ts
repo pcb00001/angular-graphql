@@ -1,6 +1,6 @@
 import {Component, OnInit, Input} from '@angular/core';
-import {ActivatedRoute, ActivatedRouteSnapshot, Router, RouterStateSnapshot} from '@angular/router';
 import {MenusService} from './service/menus.service';
+import {change_alias} from '../helpers';
 
 @Component({
     selector: 'app-menus',
@@ -9,21 +9,26 @@ import {MenusService} from './service/menus.service';
 })
 export class MenusComponent implements OnInit {
 
+    menuData = [];
+
     constructor(
         private menusService: MenusService,
     ) {
     }
 
-
     ngOnInit() {
         this.menusService.resolve().subscribe(
             res => {
-                console.log(res.data);
+                this.menuData = res.data.menusData.menusGroup.edges;
             },
             error => {
                 console.log(error);
             },
         );
+    }
+
+    getLink(name, id) {
+       return change_alias(name) + '/' + atob(id).split(':')[1]
     }
 
 }
